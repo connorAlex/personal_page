@@ -1,0 +1,117 @@
+
+  
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 100%;
+
+    display:flex;
+    flex-direction: column;
+
+    height: 100vh;
+    background: rgb(67,25,44);
+    background: linear-gradient(
+        165deg,
+        rgba(67,25,44,1) 0%, 
+        rgba(206,143,150,1) 33%,
+        rgba(195,175,187,1) 66%,
+        rgba(250,226,213,1) 90%
+        );
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.5rem;
+    padding-inline: 2rem;
+    flex-wrap: wrap;
+
+    background-color: rgba(255, 255, 255, .02);  
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid black;
+   
+}
+
+nav:first-child {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.Links {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    font-size: 1rem;
+    gap: 15px;
+
+}
+
+a {
+    text-decoration: underline;
+    color:black;
+}
+a:hover, nav > a:first-child:hover {
+    text-decoration:line-through;
+}
+main {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    
+    height: 80%;
+    width: 80%;
+    max-width: 30rem;
+    
+    gap: 1rem;
+    font-size: 1.5rem;
+   
+}
+
+.welcome{
+    font-weight: 600;
+    width: 100%;
+    font-size: 1.65rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 3px transparent;
+    
+}
+
+section:hover {
+    border-bottom: 3px solid black;
+    cursor: pointer;
+}
+
+section > :first-child {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        width: 85%;
+        font-size: 1.25rem;
+    }
+
+    nav {
+        height: 8%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+    }
+
+    nav:first-child {
+        font-size: 1.5rem;
+    }
+    .Links {
+        font-size: 1rem;
+    }
+
+}
