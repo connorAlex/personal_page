@@ -2,60 +2,145 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Welcome</title>
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Selected software projects by Connor Cochrane."
+    />
+    <title>Work | Connor Cochrane</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
+              display: ["Helvetica Neue", "Inter", "Arial", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <nav>
-      <a href="./index.html">Connor Cochrane</a>
-      <div class="Links">
-        <a target="_blank" href="https://www.google.com">Resume</a>
-        <a target="_blank" href="https://github.com/connorAlex">Github</a>
-        <a target="_blank" href="https://www.linkedin.com/in/connor-a-cochrane/"
-          >LinkedIn</a
-        >
-        <a target="_blank" href="portfolio.html">Portfolio</a>
-      </div>
-    </nav>
+  <body class="bg-neutral-100 text-neutral-950 antialiased">
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-neutral-300 bg-neutral-100/85 backdrop-blur"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-4 text-[0.68rem] font-medium uppercase tracking-[0.22em] sm:flex-row sm:px-8"
+        aria-label="Primary navigation"
+      >
+        <a href="index.html">Connor Cochrane</a>
+        <div class="flex flex-wrap items-center justify-center gap-4 text-neutral-600 sm:gap-7">
+          <a class="text-neutral-950" href="portfolio.html" aria-current="page">Work</a>
+          <a class="transition hover:text-neutral-950" href="photography.html">Photography</a>
+          <a
+            class="transition hover:text-neutral-950"
+            href="./Connor Cochrane Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            >Resume</a
+          >
+          <a class="transition hover:text-neutral-950" href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-    <main>
-      <div class="welcome">Projects</div>
-      <section data-link="https://github.com/connorAlex/TuneTurner">
-        <div>TuneTurner</div>
-        <div>
-          Make MP3 purchasing a breeze. Convert your Spotify Playlists into a
-          pre-filled Amazon Checkout Cart.
-        </div>
+    <main class="mx-auto max-w-7xl px-5 pb-24 pt-36 sm:px-8 sm:pt-28 lg:pt-36">
+      <section class="border-b border-neutral-300 pb-10">
+        <p
+          class="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-neutral-500"
+        >
+          Selected Development Work
+        </p>
+        <h1
+          class="mt-5 max-w-4xl font-display text-5xl font-semibold uppercase leading-[0.9] tracking-normal sm:text-7xl lg:text-8xl"
+        >
+          Projects
+        </h1>
       </section>
-      <section data-link="https://github.com/connorAlex/confessions">
-        <div>Confessions</div>
-        <div>
-          Submit confessions and view a single anonymous confession. A MERN
-          stack webapp fully hosted on
-          <a target="_blank" href="https://vercel.com/">Vercel</a> +
-          <a href="https://fly.io">fly.io</a>.
-        </div>
-      </section>
-      <section data-link="https://github.com/connorAlex/shopping-cart">
-        <div>Fuite A Verness</div>
-        <div>
-          Fashion E-Commerce Prototype. Functional shopping and checkout
-          experience.
-        </div>
-      </section>
-      <section data-link="https://github.com/connorAlex/mooddit">
-        <div>Mooddit</div>
-        <div>
-          Reddit comment sentiment analysis for users and subreddits. Utilizes
-          <a href="https://github.com/cjhutto/vaderSentiment">VADER</a>,
-          <a href="https://praw.readthedocs.io/en/stable/">Praw</a>, and
-          <a href="https://www.djangoproject.com/">Django</a>.
-        </div>
+
+      <section class="divide-y divide-neutral-300 border-b border-neutral-300">
+        <article class="grid gap-6 py-10 lg:grid-cols-[0.35fr_1fr_0.2fr]">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
+            Web App
+          </p>
+          <div>
+            <h2 class="text-3xl font-semibold uppercase">TuneTurner</h2>
+            <p class="mt-3 max-w-2xl leading-7 text-neutral-700">
+              Make MP3 purchasing a breeze. Convert Spotify playlists into a
+              pre-filled Amazon checkout cart.
+            </p>
+          </div>
+          <a
+            class="self-start text-xs font-semibold uppercase tracking-[0.2em] underline underline-offset-4 lg:justify-self-end"
+            href="https://github.com/connorAlex/TuneTurner"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </article>
+
+        <article class="grid gap-6 py-10 lg:grid-cols-[0.35fr_1fr_0.2fr]">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
+            Full Stack
+          </p>
+          <div>
+            <h2 class="text-3xl font-semibold uppercase">Confessions</h2>
+            <p class="mt-3 max-w-2xl leading-7 text-neutral-700">
+              Submit confessions and view a single anonymous confession. A MERN
+              stack web app hosted with Vercel and Fly.io.
+            </p>
+          </div>
+          <a
+            class="self-start text-xs font-semibold uppercase tracking-[0.2em] underline underline-offset-4 lg:justify-self-end"
+            href="https://github.com/connorAlex/confessions"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </article>
+
+        <article class="grid gap-6 py-10 lg:grid-cols-[0.35fr_1fr_0.2fr]">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
+            Commerce
+          </p>
+          <div>
+            <h2 class="text-3xl font-semibold uppercase">Fuite A Verness</h2>
+            <p class="mt-3 max-w-2xl leading-7 text-neutral-700">
+              A fashion e-commerce prototype with a functional shopping and
+              checkout experience.
+            </p>
+          </div>
+          <a
+            class="self-start text-xs font-semibold uppercase tracking-[0.2em] underline underline-offset-4 lg:justify-self-end"
+            href="https://github.com/connorAlex/shopping-cart"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </article>
+
+        <article class="grid gap-6 py-10 lg:grid-cols-[0.35fr_1fr_0.2fr]">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
+            Data
+          </p>
+          <div>
+            <h2 class="text-3xl font-semibold uppercase">Mooddit</h2>
+            <p class="mt-3 max-w-2xl leading-7 text-neutral-700">
+              Reddit comment sentiment analysis for users and subreddits using
+              VADER, PRAW, and Django.
+            </p>
+          </div>
+          <a
+            class="self-start text-xs font-semibold uppercase tracking-[0.2em] underline underline-offset-4 lg:justify-self-end"
+            href="https://github.com/connorAlex/mooddit"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </article>
       </section>
     </main>
-    <script src="script.js"></script>
   </body>
 </html>
