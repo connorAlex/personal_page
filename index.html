@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Connor Cochrane is a software developer and photographer building thoughtful digital experiences."
+      content="Connor Cochrane is a software developer and photographer."
     />
     <title>Connor Cochrane | Developer & Photographer</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,17 +22,17 @@
       };
     </script>
   </head>
-  <body class="bg-neutral-950 text-neutral-100 antialiased">
-    <header
-      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-neutral-950/85 backdrop-blur"
-    >
-      <nav
-        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-4 text-[0.68rem] font-medium uppercase tracking-[0.22em] sm:flex-row sm:px-8"
-        aria-label="Primary navigation"
+  <body class="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
+    <main class="mx-auto flex min-h-screen max-w-7xl flex-col px-5 py-5 sm:px-8">
+      <header
+        class="flex flex-col gap-3 border-b border-white/10 pb-5 text-[0.68rem] font-medium uppercase tracking-[0.22em] sm:flex-row sm:items-center sm:justify-between"
       >
-        <a href="index.html" class="text-neutral-50">Connor Cochrane</a>
-        <div class="flex flex-wrap items-center justify-center gap-4 text-neutral-300 sm:gap-7">
-          <a class="transition hover:text-white" href="#work">Work</a>
+        <a href="index.html" class="text-white">Connor Cochrane</a>
+        <nav
+          class="flex flex-wrap gap-4 text-neutral-300 sm:gap-7"
+          aria-label="Primary navigation"
+        >
+          <a class="transition hover:text-white" href="portfolio.html">Work</a>
           <a class="transition hover:text-white" href="photography.html">Photography</a>
           <a
             class="transition hover:text-white"
@@ -41,224 +41,80 @@
             rel="noreferrer"
             >Resume</a
           >
-          <a class="transition hover:text-white" href="#contact">Contact</a>
-        </div>
-      </nav>
-    </header>
+          <a class="transition hover:text-white" href="mailto:connor.alex.cochrane@gmail.com">Contact</a>
+        </nav>
+      </header>
 
-    <main>
-      <section
-        class="mx-auto grid min-h-screen max-w-7xl grid-rows-[1fr_auto] px-5 pb-8 pt-32 sm:px-8 sm:pt-28 lg:pt-28"
+      <section class="grid flex-1 items-center gap-10 py-10 lg:grid-cols-[1.15fr_0.85fr]">
+        <div>
+          <p
+            class="mb-5 text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-neutral-500"
+          >
+            Developer / Photographer
+          </p>
+          <h1
+            class="font-display text-5xl font-semibold uppercase leading-[0.9] tracking-normal text-white sm:text-7xl lg:text-8xl"
+          >
+            Connor Cochrane
+          </h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
+            I build focused web experiences and make photographs with an eye for
+            clarity, composition, and restraint.
+          </p>
+        </div>
+
+        <div class="grid gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.22em]">
+            <a
+              class="group flex items-center justify-between border-y border-white/15 py-5 text-white transition hover:border-white"
+              href="portfolio.html"
+            >
+              <span>Selected Work</span>
+              <span class="text-neutral-500 transition group-hover:text-white">View</span>
+            </a>
+            <a
+              class="group flex items-center justify-between border-b border-white/15 py-5 text-white transition hover:border-white"
+              href="photography.html"
+            >
+              <span>Photography</span>
+              <span class="text-neutral-500 transition group-hover:text-white">Gallery</span>
+            </a>
+            <a
+              class="group flex items-center justify-between border-b border-white/15 py-5 text-white transition hover:border-white"
+              href="./Connor Cochrane Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Resume</span>
+              <span class="text-neutral-500 transition group-hover:text-white">PDF</span>
+            </a>
+        </div>
+      </section>
+
+      <footer
+        class="flex flex-col gap-4 border-t border-white/10 pt-5 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-neutral-400 sm:flex-row sm:items-center sm:justify-between"
       >
-        <div class="grid items-end gap-10 lg:grid-cols-[1.18fr_0.82fr]">
-          <div class="max-w-4xl">
-            <p
-              class="mb-5 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-neutral-400"
-            >
-              Developer / Photographer
-            </p>
-            <h1
-              class="font-display text-5xl font-semibold uppercase leading-[0.9] tracking-normal text-white sm:text-7xl lg:text-8xl"
-            >
-              Connor Cochrane
-            </h1>
-            <p class="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
-              I build considered web experiences and visual systems with a focus
-              on clarity, craft, and durable front-end execution.
-            </p>
-          </div>
-
-          <div
-            class="aspect-[4/5] overflow-hidden border border-white/10 bg-neutral-900"
-            aria-label="Featured photography placeholder"
-          >
-            <div
-              class="flex h-full items-end bg-[linear-gradient(145deg,rgba(255,255,255,0.14),rgba(255,255,255,0.02)_42%,rgba(255,255,255,0.08)),radial-gradient(circle_at_34%_24%,rgba(255,255,255,0.24),transparent_28%),#151515] p-5"
-            >
-              <p
-                class="max-w-[12rem] text-[0.62rem] font-medium uppercase leading-5 tracking-[0.28em] text-neutral-400"
-              >
-                Replace with a selected photograph
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="mt-14 flex flex-wrap gap-3 border-t border-white/10 pt-6 text-[0.68rem] font-semibold uppercase tracking-[0.2em]"
+        <a
+          class="break-all transition hover:text-white"
+          href="mailto:connor.alex.cochrane@gmail.com"
+          >connor.alex.cochrane@gmail.com</a
         >
+        <div class="flex gap-5">
           <a
-            class="border border-white px-4 py-3 text-white transition hover:bg-white hover:text-neutral-950"
-            href="./Connor Cochrane Resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-            >Resume</a
-          >
-          <a
-            class="border border-white/20 px-4 py-3 text-neutral-300 transition hover:border-white hover:text-white"
+            class="transition hover:text-white"
             href="https://github.com/connorAlex"
             target="_blank"
             rel="noreferrer"
             >GitHub</a
           >
           <a
-            class="border border-white/20 px-4 py-3 text-neutral-300 transition hover:border-white hover:text-white"
+            class="transition hover:text-white"
             href="https://www.linkedin.com/in/connor-a-cochrane/"
             target="_blank"
             rel="noreferrer"
             >LinkedIn</a
           >
-          <a
-            class="border border-white/20 px-4 py-3 text-neutral-300 transition hover:border-white hover:text-white"
-            href="mailto:connor.alex.cochrane@gmail.com"
-            >Email</a
-          >
         </div>
-      </section>
-
-      <section id="work" class="border-y border-white/10 bg-neutral-100 text-neutral-950">
-        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
-          <div class="grid gap-10 lg:grid-cols-[0.6fr_1.4fr]">
-            <div>
-              <p
-                class="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-neutral-500"
-              >
-                Selected Work
-              </p>
-              <h2 class="mt-4 text-3xl font-semibold uppercase leading-none sm:text-5xl">
-                Software with a point of view.
-              </h2>
-            </div>
-
-            <div class="divide-y divide-neutral-300 border-y border-neutral-300">
-              <article class="grid gap-4 py-7 sm:grid-cols-[0.35fr_1fr]">
-                <p class="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
-                  Web App
-                </p>
-                <div>
-                  <h3 class="text-2xl font-semibold uppercase">TuneTurner</h3>
-                  <p class="mt-3 max-w-2xl leading-7 text-neutral-700">
-                    A playlist-to-purchase workflow for turning Spotify playlists
-                    into a pre-filled Amazon checkout cart.
-                  </p>
-                  <a
-                    class="mt-5 inline-block text-xs font-semibold uppercase tracking-[0.2em] underline underline-offset-4"
-                    href="https://github.com/connorAlex/TuneTurner"
-                    target="_blank"
-                    rel="noreferrer"
-                    >View Project</a
-                  >
-                </div>
-              </article>
-
-              <article class="grid gap-4 py-7 sm:grid-cols-[0.35fr_1fr]">
-                <p class="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
-                  Full Stack
-                </p>
-                <div>
-                  <h3 class="text-2xl font-semibold uppercase">Confessions</h3>
-                  <p class="mt-3 max-w-2xl leading-7 text-neutral-700">
-                    An anonymous submission and discovery app built with a MERN
-                    stack and hosted across Vercel and Fly.io.
-                  </p>
-                  <a
-                    class="mt-5 inline-block text-xs font-semibold uppercase tracking-[0.2em] underline underline-offset-4"
-                    href="https://github.com/connorAlex/confessions"
-                    target="_blank"
-                    rel="noreferrer"
-                    >View Project</a
-                  >
-                </div>
-              </article>
-
-              <article class="grid gap-4 py-7 sm:grid-cols-[0.35fr_1fr]">
-                <p class="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
-                  Prototype
-                </p>
-                <div>
-                  <h3 class="text-2xl font-semibold uppercase">Fuite A Verness</h3>
-                  <p class="mt-3 max-w-2xl leading-7 text-neutral-700">
-                    A fashion commerce prototype focused on browsing, cart, and
-                    checkout flows.
-                  </p>
-                  <a
-                    class="mt-5 inline-block text-xs font-semibold uppercase tracking-[0.2em] underline underline-offset-4"
-                    href="https://github.com/connorAlex/shopping-cart"
-                    target="_blank"
-                    rel="noreferrer"
-                    >View Project</a
-                  >
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-neutral-950 text-neutral-100">
-        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
-          <div class="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-end">
-            <div>
-              <p
-                class="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-neutral-500"
-              >
-                Photography
-              </p>
-              <h2 class="mt-4 max-w-2xl text-3xl font-semibold uppercase leading-none sm:text-5xl">
-                A separate gallery for selected images.
-              </h2>
-            </div>
-            <p class="max-w-xl leading-7 text-neutral-300 lg:justify-self-end">
-              The photography page is structured as a focused gallery, separate
-              from the development portfolio, so the images can carry their own
-              rhythm and pacing.
-            </p>
-          </div>
-
-          <div class="mt-12 grid gap-3 sm:grid-cols-3">
-            <div class="aspect-[3/4] bg-neutral-800"></div>
-            <div class="aspect-square bg-neutral-700 sm:mt-16"></div>
-            <div class="aspect-[4/5] bg-neutral-800"></div>
-          </div>
-
-          <a
-            class="mt-10 inline-block border border-white px-5 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-white hover:text-neutral-950"
-            href="photography.html"
-            >View Gallery</a
-          >
-        </div>
-      </section>
-
-      <section id="contact" class="bg-white text-neutral-950">
-        <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-          <div class="grid gap-10 lg:grid-cols-[1fr_1fr]">
-            <div>
-              <p
-                class="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-neutral-500"
-              >
-                Contact
-              </p>
-              <h2 class="mt-4 text-3xl font-semibold uppercase leading-none sm:text-5xl">
-                Let&apos;s talk.
-              </h2>
-            </div>
-            <div class="grid gap-4 text-sm font-semibold uppercase tracking-[0.18em]">
-              <a class="break-all border-b border-neutral-300 py-3 text-xs tracking-[0.12em] transition hover:border-neutral-950 sm:text-sm sm:tracking-[0.18em]" href="mailto:connor.alex.cochrane@gmail.com">
-                connor.alex.cochrane@gmail.com
-              </a>
-              <a class="border-b border-neutral-300 py-3 transition hover:border-neutral-950" href="https://github.com/connorAlex" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-              <a class="border-b border-neutral-300 py-3 transition hover:border-neutral-950" href="https://www.linkedin.com/in/connor-a-cochrane/" target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-              <a class="border-b border-neutral-300 py-3 transition hover:border-neutral-950" href="./Connor Cochrane Resume.pdf" target="_blank" rel="noreferrer">
-                Resume PDF
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      </footer>
     </main>
   </body>
 </html>
