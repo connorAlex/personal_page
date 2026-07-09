@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Photography slideshow by Connor Cochrane."
+    />
+    <title>Slideshow | Connor Cochrane</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
+              display: ["Helvetica Neue", "Inter", "Arial", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-neutral-950/85 backdrop-blur"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-4 text-[0.68rem] font-medium uppercase tracking-[0.22em] sm:flex-row sm:px-8"
+        aria-label="Primary navigation"
+      >
+        <a href="index.html" class="text-neutral-50">Connor Cochrane</a>
+        <div class="flex flex-wrap items-center justify-center gap-4 text-neutral-300 sm:gap-7">
+          <a class="transition hover:text-white" href="portfolio.html">Work</a>
+          <a class="transition hover:text-white" href="photography.html">Photography</a>
+          <a
+            class="transition hover:text-white"
+            href="./Connor Cochrane Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            >Resume</a
+          >
+          <a class="transition hover:text-white" href="mailto:connor.alex.cochrane@gmail.com">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex min-h-screen items-center justify-center px-5 pb-8 pt-36 sm:px-8 sm:pt-28">
+      <img
+        id="slideshow-image"
+        class="max-h-[72vh] max-w-full object-contain"
+        src="photos/img20260621_00141256_dr.jpg"
+        alt="Black and white photograph"
+      />
+    </main>
+
+    <script>
+      const slideshowImages = [
+        {
+          src: "photos/img20260621_00141256_dr.jpg",
+          alt: "Black and white photograph",
+        },
+        {
+          src: "photos/000051060024%202_dr_01.jpg",
+          alt: "Black and white portrait photograph",
+        },
+        {
+          src: "photos/img20251111_11175106_dr.jpg",
+          alt: "Black and white photograph",
+        },
+        {
+          src: "photos/img20251220_10344122_dr.jpg",
+          alt: "Black and white photograph",
+        },
+        {
+          src: "photos/img20260409_14242338_dr.jpg",
+          alt: "Black and white photograph of the Wrigley Field marquee",
+        },
+        {
+          src: "photos/img20260415_12554133_dr.jpg",
+          alt: "Black and white photograph",
+        },
+        {
+          src: "photos/img20251130_11255109_dr.jpg",
+          alt: "Black and white photograph",
+        },
+        {
+          src: "photos/img20260415_13062274_dr.jpg",
+          alt: "Black and white photograph",
+        },
+        {
+          src: "photos/img20260409_13343982_dr.jpg",
+          alt: "Black and white street photograph",
+        },
+      ];
+
+      const slideshowImage = document.querySelector("#slideshow-image");
+      let slideshowIndex = 1;
+
+      window.setInterval(() => {
+        const image = slideshowImages[slideshowIndex % slideshowImages.length];
+        slideshowImage.src = image.src;
+        slideshowImage.alt = image.alt;
+        slideshowIndex += 1;
+      }, 150);
+    </script>
+  </body>
+</html>
